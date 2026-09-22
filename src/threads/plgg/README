@@ -1,0 +1,30 @@
+README - Implementacao 4: Pint-OS Shell
+=======================================
+
+Sistema Operacional: Ubuntu 24.04 LTS
+
+Arquivos .c utilizados:
+  - threads/init.c   : modificado para chamar run_shell() quando nenhum argumento e passado
+  - shell.c          : implementa o loop principal do shell (prompt, leitura, parse, comandos)
+
+Como compilar:
+  cd src
+  make clean
+  make
+
+Como executar (sem argumentos - ativa o shell):
+  cd src/threads
+  pintos --
+
+Como executar (com argumento de teste normal):
+  cd src/threads
+  pintos -- run alarm-zero
+
+Como testar o shell standalone (fora do Pint-OS):
+  gcc -o shell_test shell_test.c
+  ./shell_test
+
+Comandos suportados:
+  whoami  -> imprime o nome do aluno
+  exit    -> encerra o shell
+  <outro> -> imprime "invalid command"
